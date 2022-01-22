@@ -7,24 +7,10 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Auth;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
 
 Route::get('/dashboard', [PostController::class, 'index'])->
 middleware(['auth'])->name('dashboard');
@@ -43,18 +29,24 @@ Route::get('/reviews', function () {
 
 Route::post('review_submit', [PostController::class, 'review_submit'])->name('review_submit');
 
+// XLS import
 Route::get('invoice/export/', [PostController::class, 'export'])->name('invoice_export');
 
+// XLS export
 Route::get('review/export/', [ReviewController::class, 'export'])->name('review_export');
 
+// Filtering
 Route::get('/filtras', [PostController::class, 'filtravimas'])->
 middleware(['auth'])->name('filtras');
 
-Route::get('get/{file_name}', [FileController::class, 'downloadFile']);
+// File download
+Route::get('dwl-file/{file_name}', [FileController::class, 'downloadFile']);
 
-// Route::get('/post', function () {
-//     return view('post');
-// })->middleware(['auth'])->name('post');
+// File upload
+Route::get('upl-file', [FileController::class, 'createForm']);
+Route::post('upl-file', [FileController::class, 'fileUpload'])->name('fileUpload');
+
+
 
 
 

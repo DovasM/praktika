@@ -17,8 +17,41 @@
                     Projektas bus aprašomas naudojantis ,,MS Visual studio code” programavimo aplinka, naudojant ,, Laravel vers. 8.61.0”.
                      Aplikacija turės realicine duomenų baze ,,MariaDB vers. 10.4.18”. <br><br>
 
+                        {{-- Failo ikelimas --}}
+                        @if (Auth::user()->roles===1)
+                            <div class="container mt-5">
+                                <form action="{{route('fileUpload')}}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    @if ($message = Session::get('success'))
+                                    <div class="alert alert-success">
+                                        <strong>{{ $message }}</strong>
+                                    </div>
+                                @endif
+                        
+                                @if (count($errors) > 0)
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                        
+                                    <div class="custom-file">
+                                        <input type="file" name="file" class="custom-file-input" id="chooseFile">
+                                        <label class="custom-file-label" for="chooseFile">Select file</label>
+                                    </div>
+                        
+                                    <button type="submit" name="submit" class="btn btn-primary btn-block mt-4">
+                                        Upload Files
+                                    </button>
+                                </form>
+                            </div>
+                        @endif
+
                         {{-- Failo atsisiuntimas --}}
-                        <a class="text-xl" href="get/antras_kontras.pdf">Atsisiuskite PDF faila</a> <br><br>
+                        <a class="text-xl" href="dwl-file/antras_kontras.pdf">Atsisiuskite PDF faila</a> <br><br>
 
                      <i class="font-bold">Projekto uždaviniai:</i> <ol>
                          <li>Duomenų bazė</li>
