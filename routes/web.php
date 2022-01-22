@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\FileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReviewController;
@@ -48,6 +49,8 @@ Route::get('review/export/', [ReviewController::class, 'export'])->name('review_
 
 Route::get('/filtras', [PostController::class, 'filtravimas'])->
 middleware(['auth'])->name('filtras');
+
+Route::get('get/{file_name}', [FileController::class, 'downloadFile']);
 
 // Route::get('/post', function () {
 //     return view('post');

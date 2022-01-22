@@ -17,6 +17,9 @@
                     Projektas bus aprašomas naudojantis ,,MS Visual studio code” programavimo aplinka, naudojant ,, Laravel vers. 8.61.0”.
                      Aplikacija turės realicine duomenų baze ,,MariaDB vers. 10.4.18”. <br><br>
 
+                        {{-- Failo atsisiuntimas --}}
+                        <a class="text-xl" href="get/antras_kontras.pdf">Atsisiuskite PDF faila</a> <br><br>
+
                      <i class="font-bold">Projekto uždaviniai:</i> <ol>
                          <li>Duomenų bazė</li>
                          <li>Login/Register sistema</li>
