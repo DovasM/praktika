@@ -34,6 +34,7 @@
 
                                 <tr class="border-2 hover:bg-gray-100">
                                     <td class="border-2 p-2 form-control filter-select" data-column="0">{{$filtr->name}} {{$filtr->last_name}}</td>
+                                    <td class="border-2 p-2 form-control filter-select" data-column="1">{{$filtr->fakultetas}}</td>
                                     <td class="border-2 p-2 form-control filter-select" data-column="1">{{$filtr->katedra}}</td>
                                     <td class="border-2 p-2 form-control filter-select" data-column="2">{{$filtr->kryptis}}</td>
                                     <td class="border-2 p-2 form-control filter-select" data-column="3">{{$filtr->programa}}</td>
@@ -113,6 +114,7 @@
 <input type="hidden" name="f[{{$key}}][name]" value="{{$filtr->name}}">
 <input type="hidden" name="f[{{$key}}][last_name]" value="{{$filtr->last_name}}">
 <input type="hidden" name="f[{{$key}}][email]" value="{{$filtr->email}}">
+<input type="hidden" name="f[{{$key}}][fakultetas]" value="{{$filtr->fakultetas}}">
 <input type="hidden" name="f[{{$key}}][katedra]" value="{{$filtr->katedra}}">
 <input type="hidden" name="f[{{$key}}][kryptis]" value="{{$filtr->kryptis}}">
 <input type="hidden" name="f[{{$key}}][programa]" value="{{$filtr->programa}}">

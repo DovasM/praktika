@@ -18,6 +18,7 @@ class InvoiceExport implements FromCollection, WithHeadings, ShouldAutoSize
             'Vardas',
             'Pavardė',
             'Email',
+            'Fakultetas',
             'Katedra',
             'Studijų kryptis',
             'Studijų programa',
