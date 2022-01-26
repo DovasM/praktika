@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Auth;
 
+// blade.php routes
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,6 +27,12 @@ Route::get('/about', function () {
 Route::get('/reviews', function () {
     return view('review');
 })->middleware(['auth'])->name('reviews');
+
+Route::get('/news', function () {
+    return view('news');
+})->middleware(['auth'])->name('news');
+
+// Functions routes
 
 Route::post('review_submit', [PostController::class, 'review_submit'])->name('review_submit');
 
@@ -51,6 +58,8 @@ Route::post('upl-file', [FileController::class, 'fileUpload'])->name('fileUpload
 
 
 require __DIR__.'/auth.php';
+
+// Resource route
 
 Route::resource('post', PostController::class);
 Route::resource('review', ReviewController::class);

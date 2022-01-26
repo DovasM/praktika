@@ -15,7 +15,6 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Meniu') }}
                     </x-nav-link>
-                    {{-- programu inzinierijai --}}
                     <x-nav-link :href="route('contacts')" :active="request()->routeIs('contacts')">
                         {{ __('Kontaktai') }}
                     </x-nav-link>
@@ -27,6 +26,9 @@
                     </x-nav-link>
                     <x-nav-link :href="route('reviews')" :active="request()->routeIs('review')">
                         {{ __('Parašykite atsiliepimą') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('news')" :active="request()->routeIs('news')">
+                        {{ __('Naujienos') }}
                     </x-nav-link>
                     @if (Auth::user()->roles===1)
                     <x-nav-link :href="route('review.index')" :active="request()->routeIs('review')">
