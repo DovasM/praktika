@@ -9,14 +9,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden sm:rounded-lg shadow-2xl">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <p>
-                    Šis projektas buvo pasirinktas pagal Kauno kolegijos užsakyma, kaip praktikos darbas, to pasakoje buvo išsikelti tikslai <br> <br>
-                    Sukurti WEB administracine apklikacija su duomenų baze, skirta registruoti duomenis studentams dėl ,,Erasmus” išvykų ir jos koreguoti.
-                    Tuos duomenis administraciją gales peržiūrėti, filtruoti, išsisaugoti į excel failą, bei vygdyti duomenų koregacijas.
-                    Prisijungti prie aplikacijos bus galima tik įtraukus administratoriui naują darbuotoją į duomenų bazę ir pateikus darbuotojui prisijungimo duomenis. <br> <br>
-                    Projektas bus aprašomas naudojantis ,,MS Visual studio code” programavimo aplinka, naudojant ,, Laravel vers. 8.61.0”.
-                     Aplikacija turės realicine duomenų baze ,,MariaDB vers. 10.4.18”. <br><br>
-
                         {{-- Failo ikelimas --}}
                         @if (Auth::user()->roles===1)
                             <div class="container mt-5">
@@ -40,27 +32,20 @@
                         
                                     <div class="custom-file">
                                         <input type="file" name="file" class="custom-file-input" id="chooseFile">
-                                        <label class="custom-file-label" for="chooseFile">Select file</label>
+                                        <label class="custom-file-label" for="chooseFile">Pasirinkinte failą</label>
                                     </div>
                         
                                     <button type="submit" name="submit" class="btn btn-primary btn-block mt-4">
-                                        Upload Files
+                                       Įkelti  failą
                                     </button>
                                 </form>
                             </div>
                         @endif
-
+                        <br><br>
                         {{-- Failo atsisiuntimas --}}
-                        <a class="text-xl" href="dwl-file/antras_kontras.pdf">Atsisiuskite PDF faila</a> <br><br>
+                        <a class="text-xl" href="dwl-file/Test.pdf">Atsisiuskite PDF faila</a> 
 
-                     <i class="font-bold">Projekto uždaviniai:</i> <ol>
-                         <li>Duomenų bazė</li>
-                         <li>Login/Register sistema</li>
-                         <li>Duomenų filtravimas</li>
-                         <li>Dizainas (Kauno Kolegija)</li>
-                         <li>Lengvas, bei patogys GUI</li>
-                     </ol>
-                    </p>
+
                 </div>
             </div>
         </div>

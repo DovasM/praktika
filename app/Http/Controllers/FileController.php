@@ -18,7 +18,6 @@ class FileController extends Controller
 
     public function createForm(){
         return redirect()->back();
-        // return view('file-upload');
       }
     
       public function fileUpload(Request $req){

@@ -33,6 +33,7 @@
 
                                 <tr class="border-2 hover:bg-gray-100">
                                     <td class="border-2 p-2 form-control filter-select" data-column="0">{{$user->name}} {{$user->last_name}}</td>
+                                    <td class="border-2 p-2 form-control filter-select" data-column="1">{{$user->studijos->fakultetas}}</td>
                                     <td class="border-2 p-2 form-control filter-select" data-column="1">{{$user->studijos->katedra}}</td>
                                     <td class="border-2 p-2 form-control filter-select" data-column="2">{{$user->studijos->kryptis}}</td>
                                     <td class="border-2 p-2 form-control filter-select" data-column="3">{{$user->studijos->programa}}</td>
@@ -134,6 +135,7 @@
                                 <input type="text" name="Metai"  placeholder="Metai"/>
 
                                 <hr>
+                                <input type="text" name="fakultetas"  placeholder="Fakultetas"/>
                                 <input type="text" name="katedra"  placeholder="Katedra"/>
                                 <input type="text" name="kryptis"  placeholder="Kryptis"/>
                                 <input type="text" name="programa"  placeholder="Programa"/>

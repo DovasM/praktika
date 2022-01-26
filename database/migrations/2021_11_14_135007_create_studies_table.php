@@ -15,6 +15,7 @@ class CreateStudiesTable extends Migration
     {
         Schema::create('studies', function (Blueprint $table) {
             $table->id();
+            $table->string('fakultetas');
             $table->string('katedra');
             $table->string('kryptis');
             $table->string('programa');

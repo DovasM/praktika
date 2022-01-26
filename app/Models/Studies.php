@@ -15,7 +15,7 @@ class Studies extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['katedra', 'kryptis', 'programa'];
+    protected $fillable = ['fakultetas','katedra', 'kryptis', 'programa'];
 
     public function users()
     {
